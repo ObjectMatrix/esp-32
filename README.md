@@ -1,4 +1,4 @@
-# esp-32
+# WiFi ESP-32 -> MQTT-> AWS Lambda
 
 ## Pin Configuration
 
