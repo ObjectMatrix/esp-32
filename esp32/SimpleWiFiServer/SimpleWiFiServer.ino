@@ -4,14 +4,14 @@
 #include <ArduinoJson.h>
 #include <WiFi.h>
 
-const char* ssid = "FBIHQ_EXT";
-const char* password = "nupsidupsi1204";
+const char* ssid = "";
+const char* password = "";
 
 // The name of the device. This MUST match up with the name defined in the AWS console
 #define DEVICE_NAME "esp-32-thingy"
 
 // The MQTTT endpoint for the device (unique for each AWS account but shared amongst devices within the account)
-#define AWS_IOT_ENDPOINT "a3amyzmzkjgky3-ats.iot.us-east-1.amazonaws.com"
+#define AWS_IOT_ENDPOINT "a3amyzmzkjgkyc3-ats.iot.us-east-1.amazonaws.com"
 
 // The MQTT topic that this device should publish to
 #define AWS_IOT_TOPIC "$aws/things/" DEVICE_NAME "/shadow/update"
