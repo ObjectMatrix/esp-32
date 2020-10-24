@@ -1,4 +1,4 @@
-# WiFi ESP-32 -> MQTT-> AWS Lambda (AWS IoT)
+# WiFi ESP-32 < - > MQTT (AWS IoT) -> AWS Lambda 
 ### WiFi ESP-32 -> ThingSpeak (MatLAB)
 
 ## Pin Configuration
