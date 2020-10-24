@@ -2,15 +2,18 @@ const AWS = require('aws-sdk');
 var iotdata = new AWS.IotData({endpoint: 'a3amyzmzkjgky3-ats.iot.us-east-1.amazonaws.com'});
 
 exports.handler = async (event, context) => {
-  
   var params = {
-       topic: 'esp32/sub',
-       payload: "1",
+       topic: "esp32/sub",
+       payload: event.headers.message,
        qos: 0
   }
-  
   return {
     statusCode: 200,
+            headers: {
+            "Access-Control-Allow-Headers" : "*",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PUT"
+          },
     body: JSON.stringify(await publishMessage(params))
   }
 }
@@ -23,7 +26,6 @@ const publishMessage = async (params) => {
         reject(err)
       }
       else{
-        console.log("success?");
         resolve(params)
       }
     })
